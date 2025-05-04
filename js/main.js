@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // References to DOM elements
     const header = document.querySelector('header');
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const menuCategories = document.querySelectorAll('.menu-category');
     const fadeElements = document.querySelectorAll('.fade-in');
     const specialtyCards = document.querySelectorAll('.specialty-card');
+    const faqItems = document.querySelectorAll('.faq-item');
 
     // Initialize the page
     initPage();
@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
      * Setup mobile menu functionality
      */
     function setupMobileMenu() {
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', function() {
-                mobileMenuToggle.classList.toggle('active');
+        const menuToggle = document.querySelector('.menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
                 navMenu.classList.toggle('active');
                 document.body.classList.toggle('menu-open');
             });
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const navLinks = navMenu.querySelectorAll('a');
             navLinks.forEach(link => {
                 link.addEventListener('click', function() {
-                    mobileMenuToggle.classList.remove('active');
+                    menuToggle.classList.remove('active');
                     navMenu.classList.remove('active');
                     document.body.classList.remove('menu-open');
                 });
@@ -69,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(event) {
                 const isClickInsideMenu = navMenu.contains(event.target);
-                const isClickOnToggle = mobileMenuToggle.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
                 
                 if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
-                    mobileMenuToggle.classList.remove('active');
+                    menuToggle.classList.remove('active');
                     navMenu.classList.remove('active');
                     document.body.classList.remove('menu-open');
                 }

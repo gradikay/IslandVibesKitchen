@@ -563,3 +563,95 @@
         transform: none;
     }
 }
+
+/* === EVENTS & CATERING PAGE RESPONSIVE STYLES === */
+@media (max-width: 1199.98px) {
+    .event-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .catering-menu-options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 989.98px) {
+    .events-intro-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .events-intro-text,
+    .events-intro-image {
+        width: 100%;
+    }
+    
+    .venue-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .venue-image,
+    .venue-details {
+        width: 100%;
+    }
+    
+    .contact-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .highlight-boxes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .event-types-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .event-type-card {
+        padding: 20px;
+    }
+    
+    .menu-option h3 {
+        padding: 10px 15px;
+    }
+    
+    .menu-option-content {
+        padding: 15px;
+    }
+    
+    .venue-features li {
+        flex-wrap: wrap;
+    }
+    
+    .venue-features .feature-icon {
+        margin-bottom: 10px;
+    }
+    
+    .faq-question {
+        padding: 15px;
+    }
+    
+    .faq-answer {
+        padding: 0 15px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 15px 15px;
+    }
+}
