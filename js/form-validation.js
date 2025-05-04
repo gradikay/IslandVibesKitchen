@@ -1,5 +1,5 @@
 /**
- * La Tavola Restaurant Website
+ * Island Vibes Kitchen - Jamaican Restaurant Website
  * Form Validation JavaScript
  */
 
@@ -11,6 +11,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', validateForm);
+        
+        // Add input event listeners for real-time validation
+        const formFields = contactForm.querySelectorAll('input, textarea, select');
+        formFields.forEach(field => {
+            field.addEventListener('blur', function() {
+                validateField(this);
+            });
+            
+            field.addEventListener('input', function() {
+                // If field was previously marked as invalid, check it again
+                if (this.classList.contains('is-invalid')) {
+                    validateField(this);
+                }
+            });
+        });
     }
 
     /**
@@ -78,6 +93,72 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
+     * Validate a single form field
+     * @param {HTMLElement} field - The field to validate
+     */
+    function validateField(field) {
+        let isValid = true;
+        const fieldId = field.id;
+        const errorId = `${fieldId}-error`;
+        
+        // Reset field error
+        field.classList.remove('is-invalid');
+        const errorElement = document.getElementById(errorId);
+        if (errorElement) {
+            errorElement.style.display = 'none';
+        }
+        
+        // Validate based on field type
+        switch (fieldId) {
+            case 'name':
+                if (!field.value.trim()) {
+                    showError(field, errorId, 'Please enter your name');
+                    isValid = false;
+                } else if (field.value.trim().length < 2) {
+                    showError(field, errorId, 'Name must be at least 2 characters');
+                    isValid = false;
+                }
+                break;
+                
+            case 'email':
+                if (!field.value.trim()) {
+                    showError(field, errorId, 'Please enter your email');
+                    isValid = false;
+                } else if (!isValidEmail(field.value)) {
+                    showError(field, errorId, 'Please enter a valid email address');
+                    isValid = false;
+                }
+                break;
+                
+            case 'phone':
+                if (field.value.trim() && !isValidPhone(field.value)) {
+                    showError(field, errorId, 'Please enter a valid phone number');
+                    isValid = false;
+                }
+                break;
+                
+            case 'subject':
+                if (!field.value) {
+                    showError(field, errorId, 'Please select a subject');
+                    isValid = false;
+                }
+                break;
+                
+            case 'message':
+                if (!field.value.trim()) {
+                    showError(field, errorId, 'Please enter your message');
+                    isValid = false;
+                } else if (field.value.trim().length < 10) {
+                    showError(field, errorId, 'Message must be at least 10 characters');
+                    isValid = false;
+                }
+                break;
+        }
+        
+        return isValid;
+    }
+
+    /**
      * Display an error message for a form field
      * @param {HTMLElement} field - The form field with an error
      * @param {string} errorId - The ID of the error message element
@@ -88,8 +169,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (errorElement) {
             errorElement.textContent = message;
             errorElement.style.display = 'block';
-            field.classList.add('error');
+            field.classList.add('is-invalid');
             field.setAttribute('aria-invalid', 'true');
+            
+            // Shake animation for error feedback
+            field.classList.add('shake');
+            setTimeout(() => {
+                field.classList.remove('shake');
+            }, 500);
         }
     }
 
@@ -107,15 +194,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove error classes from fields
         const formFields = contactForm.querySelectorAll('input, select, textarea');
         formFields.forEach(field => {
-            field.classList.remove('error');
+            field.classList.remove('is-invalid');
             field.setAttribute('aria-invalid', 'false');
         });
         
         // Reset form status
         const formStatus = document.getElementById('form-status');
-        formStatus.textContent = '';
-        formStatus.className = 'form-status';
-        formStatus.style.display = 'none';
+        if (formStatus) {
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+            formStatus.style.display = 'none';
+        }
     }
 
     /**
@@ -134,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * @returns {boolean} - Whether the phone number is valid
      */
     function isValidPhone(phone) {
-        // Basic phone validation - allows various formats
+        // Accept various formats: (123) 456-7890, 123-456-7890, 123.456.7890, etc.
         const phoneRegex = /^[\d\s()+-.]{7,20}$/;
         return phoneRegex.test(phone);
     }
@@ -148,6 +237,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
+        
+        // Add loading class for spinner animation
+        submitButton.classList.add('loading');
         
         // Simulate network delay
         setTimeout(() => {
@@ -163,9 +255,27 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset button
             submitButton.textContent = originalText;
             submitButton.disabled = false;
+            submitButton.classList.remove('loading');
             
             // Scroll to form status message
             formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Hide success message after a delay
+            setTimeout(() => {
+                formStatus.style.opacity = '0';
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                    formStatus.style.opacity = '1';
+                }, 500);
+            }, 5000);
         }, 1500);
     }
+    
+    // Add keypress event listener to allow form submission with Enter key
+    contactForm.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA') {
+            event.preventDefault();
+            validateForm(event);
+        }
+    });
 });

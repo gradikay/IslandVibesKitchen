@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="La Tavola - Explore our delicious menu">
-    <title>La Tavola | Menu</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="description" content="Island Vibes Kitchen - Explore our authentic Jamaican menu featuring traditional favorites like jerk chicken, ackee & saltfish, curry goat, and more.">
+    <title>Menu | Island Vibes Kitchen</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/logo.svg" alt="La Tavola Logo">
-                    <h1>La Tavola</h1>
+                    <img src="images/logo.svg" alt="Island Vibes Kitchen Logo">
+                    <h1>Island Vibes Kitchen <span>Authentic Jamaican Cuisine</span></h1>
                 </a>
             </div>
             <nav>
@@ -29,285 +37,529 @@
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li class="active"><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Our Story</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Page Header -->
         <section class="page-header">
             <div class="container">
                 <h2>Our Menu</h2>
-                <p>Crafted with passion and tradition</p>
+                <p>Authentic Jamaican flavors made with love</p>
             </div>
         </section>
 
-        <section class="menu-nav section">
+        <!-- Menu Section -->
+        <section class="menu section">
             <div class="container">
-                <div class="menu-categories">
+                <div class="section-header">
+                    <div class="section-decoration"></div>
+                    <h2>Discover Our Dishes</h2>
+                    <p>Explore the rich flavors and vibrant spices of authentic Jamaican cuisine</p>
+                </div>
+
+                <!-- Menu Categories Navigation -->
+                <div class="menu-nav">
                     <button class="menu-category active" data-category="starters">Starters</button>
-                    <button class="menu-category" data-category="mains">Mains</button>
+                    <button class="menu-category" data-category="mains">Main Dishes</button>
+                    <button class="menu-category" data-category="sides">Sides</button>
                     <button class="menu-category" data-category="desserts">Desserts</button>
                     <button class="menu-category" data-category="drinks">Drinks</button>
                 </div>
+
+                <!-- Starters -->
+                <div class="menu-category-section active" id="starters">
+                    <div class="menu-grid">
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/jerk-chicken.jpg" alt="Jamaican Patties">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Jamaican Patties</h3>
+                                    <div class="menu-item-price">$4.99</div>
+                                </div>
+                                <p class="menu-item-description">Flaky pastry filled with spiced beef, chicken, or vegetables. Served with a side of Scotch bonnet pepper sauce.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Traditional</span>
+                                    <span class="menu-tag">Spicy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/ackee-saltfish.jpg" alt="Festival">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Festival</h3>
+                                    <div class="menu-item-price">$3.99</div>
+                                </div>
+                                <p class="menu-item-description">Sweet and savory fried dumplings, slightly sweet with a hint of vanilla. Perfect complement to any of our main dishes.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Popular</span>
+                                    <span class="menu-tag">Vegetarian</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Callaloo Fritters">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Callaloo Fritters</h3>
+                                    <div class="menu-item-price">$5.99</div>
+                                </div>
+                                <p class="menu-item-description">Crispy fritters made with callaloo greens, onions, and spices. Served with our homemade mango chutney.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Vegetarian</span>
+                                    <span class="menu-tag">Chef's Choice</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/jerk-chicken.jpg" alt="Stamp and Go">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Stamp and Go</h3>
+                                    <div class="menu-item-price">$6.99</div>
+                                </div>
+                                <p class="menu-item-description">Traditional Jamaican salt fish fritters with scotch bonnet peppers and herbs. Served with a tangy dipping sauce.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Seafood</span>
+                                    <span class="menu-tag">Traditional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Dishes -->
+                <div class="menu-category-section" id="mains">
+                    <div class="menu-grid">
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/jerk-chicken.jpg" alt="Jerk Chicken">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Jerk Chicken</h3>
+                                    <div class="menu-item-price">$15.99</div>
+                                </div>
+                                <p class="menu-item-description">Our signature dish - chicken marinated in a spicy blend of scotch bonnet peppers, allspice, and other herbs, then grilled to perfection. Served with rice and peas and festival.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Signature</span>
+                                    <span class="menu-tag">Spicy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/ackee-saltfish.jpg" alt="Ackee and Saltfish">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Ackee & Saltfish</h3>
+                                    <div class="menu-item-price">$14.99</div>
+                                </div>
+                                <p class="menu-item-description">Jamaica's national dish - ackee fruit sautéed with salt cod, onions, tomatoes, and spices. Served with bammy, fried plantains, and fresh avocado.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">National Dish</span>
+                                    <span class="menu-tag">Seafood</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Curry Goat">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Curry Goat</h3>
+                                    <div class="menu-item-price">$16.99</div>
+                                </div>
+                                <p class="menu-item-description">Tender chunks of goat meat slow-cooked in a rich curry sauce with potatoes and carrots. Served with steamed rice and roti bread.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Popular</span>
+                                    <span class="menu-tag">Spicy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Oxtail Stew">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Oxtail Stew</h3>
+                                    <div class="menu-item-price">$17.99</div>
+                                </div>
+                                <p class="menu-item-description">Succulent oxtail braised with butter beans, carrots, and thyme in a rich, velvety gravy. Served with rice and peas and steamed vegetables.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Chef's Choice</span>
+                                    <span class="menu-tag">Traditional</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/ackee-saltfish.jpg" alt="Brown Stew Chicken">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Brown Stew Chicken</h3>
+                                    <div class="menu-item-price">$14.99</div>
+                                </div>
+                                <p class="menu-item-description">Tender chicken pieces marinated and braised in a flavorful brown sauce with vegetables. Served with rice and peas and fried plantains.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Family Recipe</span>
+                                    <span class="menu-tag">Comfort Food</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Escovitch Fish">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Escovitch Fish</h3>
+                                    <div class="menu-item-price">$18.99</div>
+                                </div>
+                                <p class="menu-item-description">Crispy fried whole snapper topped with a tangy pickled vegetable sauce. Served with bammy and festival.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Seafood</span>
+                                    <span class="menu-tag">Spicy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides -->
+                <div class="menu-category-section" id="sides">
+                    <div class="menu-grid">
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Rice and Peas">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Rice and Peas</h3>
+                                    <div class="menu-item-price">$4.99</div>
+                                </div>
+                                <p class="menu-item-description">Traditional Jamaican rice cooked with coconut milk, kidney beans, thyme, and other seasonings.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Traditional</span>
+                                    <span class="menu-tag">Vegetarian</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/jerk-chicken.jpg" alt="Fried Plantains">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Fried Plantains</h3>
+                                    <div class="menu-item-price">$3.99</div>
+                                </div>
+                                <p class="menu-item-description">Sweet, ripe plantains fried to golden perfection. A perfect sweet complement to our savory dishes.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Vegetarian</span>
+                                    <span class="menu-tag">Sweet</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/ackee-saltfish.jpg" alt="Bammy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Bammy</h3>
+                                    <div class="menu-item-price">$3.99</div>
+                                </div>
+                                <p class="menu-item-description">Traditional Jamaican cassava flatbread, soaked in coconut milk and fried until golden. Classic accompaniment to seafood dishes.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Traditional</span>
+                                    <span class="menu-tag">Vegetarian</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Callaloo">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Steamed Callaloo</h3>
+                                    <div class="menu-item-price">$4.99</div>
+                                </div>
+                                <p class="menu-item-description">Leafy greens similar to spinach, steamed with onions, garlic, and a touch of scotch bonnet pepper. A nutritious and flavorful side.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Vegetarian</span>
+                                    <span class="menu-tag">Healthy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category-section" id="desserts">
+                    <div class="menu-grid">
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Rum Cake">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Jamaican Rum Cake</h3>
+                                    <div class="menu-item-price">$6.99</div>
+                                </div>
+                                <p class="menu-item-description">Rich, dark fruit cake infused with Jamaican rum. A traditional dessert especially popular during celebrations.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Contains Alcohol</span>
+                                    <span class="menu-tag">Traditional</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/jerk-chicken.jpg" alt="Sweet Potato Pudding">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Sweet Potato Pudding</h3>
+                                    <div class="menu-item-price">$5.99</div>
+                                </div>
+                                <p class="menu-item-description">A beloved Jamaican dessert made with grated sweet potatoes, coconut milk, spices, and raisins, then baked to perfection.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Vegetarian</span>
+                                    <span class="menu-tag">Customer Favorite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/ackee-saltfish.jpg" alt="Coconut Ice Cream">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Coconut Ice Cream</h3>
+                                    <div class="menu-item-price">$4.99</div>
+                                </div>
+                                <p class="menu-item-description">Creamy homemade ice cream made with fresh coconut milk and a hint of nutmeg. Served with toasted coconut flakes.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Vegetarian</span>
+                                    <span class="menu-tag">Refreshing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Grater Cake">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Grater Cake</h3>
+                                    <div class="menu-item-price">$3.99</div>
+                                </div>
+                                <p class="menu-item-description">A traditional Jamaican coconut candy made with grated coconut and sugar, colored in pink and white layers. A sweet treat with nostalgic appeal.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Vegetarian</span>
+                                    <span class="menu-tag">Traditional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-category-section" id="drinks">
+                    <div class="menu-grid">
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/rum-punch.jpg" alt="Rum Punch">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Jamaican Rum Punch</h3>
+                                    <div class="menu-item-price">$8.99</div>
+                                </div>
+                                <p class="menu-item-description">A tropical blend of Jamaican rum, fruit juices, and grenadine. Garnished with fresh fruit and a cherry.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Contains Alcohol</span>
+                                    <span class="menu-tag">Signature</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/curry-goat.jpg" alt="Sorrel Drink">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Sorrel Drink</h3>
+                                    <div class="menu-item-price">$4.99</div>
+                                </div>
+                                <p class="menu-item-description">A refreshing beverage made from hibiscus flowers, ginger, and spices. Especially popular during the holidays.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Non-Alcoholic</span>
+                                    <span class="menu-tag">Traditional</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/jerk-chicken.jpg" alt="Blue Mountain Coffee">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Blue Mountain Coffee</h3>
+                                    <div class="menu-item-price">$3.99</div>
+                                </div>
+                                <p class="menu-item-description">Premium Jamaican Blue Mountain coffee, renowned worldwide for its mild flavor and lack of bitterness. Served hot or iced.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Non-Alcoholic</span>
+                                    <span class="menu-tag">Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item fade-in">
+                            <div class="menu-item-image">
+                                <img src="images/ackee-saltfish.jpg" alt="Ginger Beer">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h3 class="menu-item-title">Homemade Ginger Beer</h3>
+                                    <div class="menu-item-price">$4.99</div>
+                                </div>
+                                <p class="menu-item-description">A spicy, refreshing beverage made with fresh ginger, lime, and a hint of honey. A perfect palate cleanser.</p>
+                                <div class="menu-item-tags">
+                                    <span class="menu-tag">Non-Alcoholic</span>
+                                    <span class="menu-tag">Spicy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="menu-items section">
-            <div class="container">
-                <div class="menu-section starters active" id="starters">
-                    <div class="section-header">
-                        <h2>Starters</h2>
-                        <div class="separator"></div>
-                    </div>
-                    <div class="menu-grid">
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Bruschetta</h3>
-                                <p class="menu-item-description">Toasted bread topped with fresh tomatoes, garlic, basil, and extra virgin olive oil</p>
-                                <span class="menu-item-price">$9</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Antipasto Platter</h3>
-                                <p class="menu-item-description">Selection of Italian cured meats, cheeses, olives, and grilled vegetables</p>
-                                <span class="menu-item-price">$16</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Arancini</h3>
-                                <p class="menu-item-description">Crispy risotto balls stuffed with mozzarella, peas, and tomato sauce</p>
-                                <span class="menu-item-price">$12</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Caprese Salad</h3>
-                                <p class="menu-item-description">Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze</p>
-                                <span class="menu-item-price">$11</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-section mains" id="mains">
-                    <div class="section-header">
-                        <h2>Mains</h2>
-                        <div class="separator"></div>
-                    </div>
-                    <div class="menu-grid">
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Handmade Pasta</h3>
-                                <p class="menu-item-description">Fresh pasta made daily, served with our chef's special sauce</p>
-                                <span class="menu-item-price">$18</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Herb-Crusted Salmon</h3>
-                                <p class="menu-item-description">Wild-caught salmon with a crispy herb crust, served with seasonal vegetables</p>
-                                <span class="menu-item-price">$24</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Osso Buco</h3>
-                                <p class="menu-item-description">Braised veal shanks with vegetables, white wine, and gremolata</p>
-                                <span class="menu-item-price">$28</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Risotto ai Funghi</h3>
-                                <p class="menu-item-description">Creamy risotto with wild mushrooms, parmesan, and truffle oil</p>
-                                <span class="menu-item-price">$20</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Eggplant Parmigiana</h3>
-                                <p class="menu-item-description">Layers of eggplant, tomato sauce, mozzarella, and parmesan</p>
-                                <span class="menu-item-price">$16</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Chicken Marsala</h3>
-                                <p class="menu-item-description">Pan-seared chicken breast with marsala wine sauce and mushrooms</p>
-                                <span class="menu-item-price">$22</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-section desserts" id="desserts">
-                    <div class="section-header">
-                        <h2>Desserts</h2>
-                        <div class="separator"></div>
-                    </div>
-                    <div class="menu-grid">
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Tiramisu</h3>
-                                <p class="menu-item-description">Traditional Italian dessert made with our secret family recipe</p>
-                                <span class="menu-item-price">$9</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Panna Cotta</h3>
-                                <p class="menu-item-description">Silky vanilla cream with seasonal berry compote</p>
-                                <span class="menu-item-price">$8</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Cannoli</h3>
-                                <p class="menu-item-description">Crispy pastry shells filled with sweet ricotta cream and chocolate chips</p>
-                                <span class="menu-item-price">$7</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Affogato</h3>
-                                <p class="menu-item-description">Vanilla gelato "drowned" with a shot of hot espresso</p>
-                                <span class="menu-item-price">$6</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-section drinks" id="drinks">
-                    <div class="section-header">
-                        <h2>Drinks</h2>
-                        <div class="separator"></div>
-                    </div>
-                    <div class="menu-grid">
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Italian Wines</h3>
-                                <p class="menu-item-description">Selection of red and white wines from various regions of Italy</p>
-                                <span class="menu-item-price">$9-15 / glass</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Aperitifs</h3>
-                                <p class="menu-item-description">Classic Italian aperitifs including Aperol Spritz and Negroni</p>
-                                <span class="menu-item-price">$12</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Espresso</h3>
-                                <p class="menu-item-description">Rich, aromatic espresso made with imported Italian beans</p>
-                                <span class="menu-item-price">$3.50</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Craft Cocktails</h3>
-                                <p class="menu-item-description">Seasonal cocktails crafted with fresh ingredients and premium spirits</p>
-                                <span class="menu-item-price">$14</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Italian Sodas</h3>
-                                <p class="menu-item-description">Refreshing sodas with imported Italian syrups</p>
-                                <span class="menu-item-price">$5</span>
-                            </div>
-                        </div>
-                        <div class="menu-item fade-in">
-                            <div class="menu-item-content">
-                                <h3>Digestifs</h3>
-                                <p class="menu-item-description">Selection of amari and other Italian digestifs</p>
-                                <span class="menu-item-price">$10</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Dietary Information -->
         <section class="dietary-info section">
             <div class="container">
                 <div class="section-header">
+                    <div class="section-decoration"></div>
                     <h2>Dietary Information</h2>
-                    <div class="separator"></div>
+                    <p>We strive to accommodate various dietary needs</p>
                 </div>
                 <div class="dietary-content">
-                    <p>At La Tavola, we strive to accommodate all dietary needs. Many of our dishes can be modified to be gluten-free, vegetarian, or vegan. Please inform your server of any allergies or dietary restrictions, and our chefs will be happy to prepare something special for you.</p>
-                    <div class="dietary-icons">
-                        <div class="dietary-icon">
-                            <span class="icon">V</span>
-                            <span class="label">Vegetarian</span>
-                        </div>
-                        <div class="dietary-icon">
-                            <span class="icon">VG</span>
-                            <span class="label">Vegan</span>
-                        </div>
-                        <div class="dietary-icon">
-                            <span class="icon">GF</span>
-                            <span class="label">Gluten-Free</span>
-                        </div>
-                        <div class="dietary-icon">
-                            <span class="icon">N</span>
-                            <span class="label">Contains Nuts</span>
-                        </div>
+                    <p>At Island Vibes Kitchen, we understand the importance of catering to different dietary needs. Many of our dishes can be modified to be vegetarian or gluten-free. Please inform your server of any allergies or dietary restrictions, and our chefs will be happy to accommodate your needs whenever possible.</p>
+                    <p>Please note that we use traditional Jamaican seasonings and spices in our cooking, including scotch bonnet peppers, which add a distinctive heat to many of our dishes. Let us know your preferred spice level, and we'll do our best to adjust accordingly.</p>
+                    <div class="center-btn">
+                        <a href="contact.html" class="btn btn-primary">Contact Us About Special Dietary Needs</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.svg" alt="La Tavola Logo">
-                    <h3>La Tavola</h3>
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Island Vibes Kitchen Logo">
+                    </div>
+                    <p>Island Vibes Kitchen brings authentic Jamaican cuisine to your neighborhood. We're passionate about sharing our traditional recipes and the vibrant culture of Jamaica.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <div class="footer-section">
-                        <h4>Contact</h4>
-                        <p>123 Main Street<br>Anytown, ST 12345</p>
-                        <p>Phone: (123) 456-7890</p>
-                        <p>Email: info@latavola.com</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Hours</h4>
-                        <p>Monday - Thursday: 12:00 PM - 10:00 PM</p>
-                        <p>Friday - Saturday: 12:00 PM - 11:30 PM</p>
-                        <p>Sunday: 11:00 AM - 9:00 PM</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Follow Us</h4>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                            </a>
-                            <a href="#" aria-label="Instagram">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                            </a>
-                            <a href="#" aria-label="Twitter">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                            </a>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#reservations">Reservations</a></li>
+                        <li><a href="contact.html#catering">Catering</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         </div>
+                        <div>123 Main Street<br>Anytown, ST 12345</div>
                     </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>(123) 456-7890</div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>info@islandvibeskitchen.com</div>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <h3>Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday - Thursday</span>
+                            <span class="time">11:00 AM - 9:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Friday - Saturday</span>
+                            <span class="time">11:00 AM - 10:30 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday</span>
+                            <span class="time">12:00 PM - 8:00 PM</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 La Tavola. All rights reserved.</p>
+                <p>&copy; 2023 Island Vibes Kitchen. All rights reserved.</p>
+                <div class="jamaica-colors">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>

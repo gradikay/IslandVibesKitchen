@@ -1,5 +1,5 @@
 /**
- * La Tavola Restaurant Website
+ * Island Vibes Kitchen - Jamaican Restaurant Website
  * Main JavaScript File
  */
 
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     const menuCategories = document.querySelectorAll('.menu-category');
     const fadeElements = document.querySelectorAll('.fade-in');
+    const specialtyCards = document.querySelectorAll('.specialty-card');
 
     // Initialize the page
     initPage();
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupMenuCategories();
         setupScrollEvents();
         checkElementsInView();
+        setupSpecialtyHover();
 
         // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Handle scroll events
      */
     function handleScroll() {
-        // Add shadow to header when scrolled
+        // Add shadow and reduce size to header when scrolled
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
@@ -63,6 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.classList.remove('menu-open');
                 });
             });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = navMenu.contains(event.target);
+                const isClickOnToggle = mobileMenuToggle.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                    mobileMenuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
         }
     }
 
@@ -82,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     category.classList.add('active');
                     
                     // Hide all menu sections
-                    const menuSections = document.querySelectorAll('.menu-section');
+                    const menuSections = document.querySelectorAll('.menu-category-section');
                     menuSections.forEach(section => {
                         section.classList.remove('active');
                     });
@@ -92,6 +106,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     const targetSection = document.getElementById(targetCategory);
                     if (targetSection) {
                         targetSection.classList.add('active');
+                        
+                        // Trigger fade-in animations for newly visible content
+                        const targetFadeElements = targetSection.querySelectorAll('.fade-in');
+                        targetFadeElements.forEach(element => {
+                            setTimeout(() => {
+                                element.classList.add('visible');
+                            }, 100);
+                        });
                     }
                 });
             });
@@ -110,8 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (targetElement) {
                         e.preventDefault();
                         
+                        const headerOffset = header.offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = targetPosition - headerOffset;
+
                         window.scrollTo({
-                            top: targetElement.offsetTop - header.offsetHeight,
+                            top: offsetPosition,
                             behavior: 'smooth'
                         });
                     }
@@ -127,11 +153,109 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const elementBottom = element.getBoundingClientRect().bottom;
-            const isVisible = (elementTop < window.innerHeight - 100) && (elementBottom > 0);
+            
+            // Adjust threshold to make elements appear earlier
+            const threshold = window.innerHeight * 0.85;
+            
+            // Element is visible when top is in view or when bottom is in view
+            const isVisible = (elementTop < threshold) && (elementBottom > 0);
             
             if (isVisible) {
                 element.classList.add('visible');
             }
         });
     }
+
+    /**
+     * Setup specialty card hover effects
+     */
+    function setupSpecialtyHover() {
+        if (specialtyCards.length) {
+            specialtyCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.querySelector('.specialty-badge').style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.querySelector('.specialty-badge').style.transform = 'translateY(0)';
+                });
+            });
+        }
+    }
+});
+
+/**
+ * Initialize Testimonial Slider
+ * This is a simple auto-scroll testimonial slider
+ */
+class TestimonialSlider {
+    constructor(sliderSelector) {
+        this.slider = document.querySelector(sliderSelector);
+        if (!this.slider) return;
+        
+        this.testimonials = this.slider.querySelectorAll('.testimonial');
+        if (this.testimonials.length <= 1) return;
+        
+        this.currentIndex = 0;
+        this.interval = null;
+        this.animationDuration = 500; // ms
+        this.slideDelay = 6000; // ms
+        
+        this.initSlider();
+    }
+    
+    initSlider() {
+        // Clone the first testimonial and append it to the end for infinite loop
+        const firstClone = this.testimonials[0].cloneNode(true);
+        this.slider.appendChild(firstClone);
+        
+        // Set initial position
+        this.testimonials = this.slider.querySelectorAll('.testimonial');
+        this.setPosition();
+        
+        // Start the slider
+        this.startSlider();
+        
+        // Pause on hover
+        this.slider.addEventListener('mouseenter', () => this.stopSlider());
+        this.slider.addEventListener('mouseleave', () => this.startSlider());
+    }
+    
+    setPosition() {
+        const position = -this.currentIndex * 100;
+        this.slider.style.transform = `translateX(${position}%)`;
+    }
+    
+    nextSlide() {
+        if (this.currentIndex === this.testimonials.length - 1) {
+            // We're at the cloned slide, quickly reset to the first slide without animation
+            this.currentIndex = 0;
+            this.slider.style.transition = 'none';
+            this.setPosition();
+            
+            // Force reflow to make sure the jump happens before re-enabling animation
+            this.slider.offsetHeight;
+            this.slider.style.transition = `transform ${this.animationDuration}ms ease`;
+        }
+        
+        this.currentIndex++;
+        this.setPosition();
+    }
+    
+    startSlider() {
+        this.stopSlider();
+        this.interval = setInterval(() => this.nextSlide(), this.slideDelay);
+    }
+    
+    stopSlider() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+}
+
+// Initialize testimonial slider when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialSlider = new TestimonialSlider('.testimonials-slider');
 });
