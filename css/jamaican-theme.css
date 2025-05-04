@@ -141,3 +141,111 @@
   height: 3px;
   background: linear-gradient(to right, var(--jamaica-green) 33.3%, var(--jamaica-yellow) 33.3%, var(--jamaica-yellow) 66.6%, var(--jamaica-black) 66.6%);
 }
+
+/* Jamaican pattern decorative element */
+.jamaica-pattern {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.jamaica-pattern:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--jamaica-green),
+    var(--jamaica-green) 10px,
+    var(--jamaica-yellow) 10px,
+    var(--jamaica-yellow) 20px,
+    var(--jamaica-black) 20px,
+    var(--jamaica-black) 30px
+  );
+}
+
+/* Button with Jamaican colors */
+.jamaica-button {
+  background-color: var(--jamaica-green);
+  color: white;
+  border: 2px solid var(--jamaica-yellow);
+  padding: 12px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.jamaica-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--jamaica-black);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.jamaica-button:hover {
+  color: var(--jamaica-yellow);
+}
+
+.jamaica-button:hover:before {
+  left: 0;
+}
+
+/* Authentic border styles */
+.jamaican-border-container {
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--jamaica-green);
+}
+
+.jamaican-border-container:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px dashed var(--jamaica-yellow);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Jamaican texture background */
+.jamaica-texture-bg {
+  background-color: rgba(0, 155, 119, 0.05);
+  background-image: 
+    linear-gradient(
+      45deg, 
+      var(--jamaica-yellow) 25%, 
+      transparent 25%, 
+      transparent 75%, 
+      var(--jamaica-yellow) 75%, 
+      var(--jamaica-yellow)
+    ),
+    linear-gradient(
+      45deg, 
+      var(--jamaica-yellow) 25%, 
+      transparent 25%, 
+      transparent 75%, 
+      var(--jamaica-yellow) 75%, 
+      var(--jamaica-yellow)
+    );
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  background-blend-mode: multiply;
+  opacity: 0.1;
+}
