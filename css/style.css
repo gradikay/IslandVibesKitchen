@@ -2093,26 +2093,25 @@ footer:before {
     }
 }
 /* Wave text animation for 'Jamaican' */
+.wave-text-wrapper {
+    display: inline-flex;
+}
+
 .wave-text {
     display: inline-block;
     position: relative;
     color: var(--jamaica-yellow);
     font-weight: 700;
-    animation: wave-animation 2.5s ease-in-out infinite;
-    text-shadow: 0 0 8px rgba(246, 213, 92, 0.6);
+    animation: jumping-letter 1.5s ease-in-out infinite;
+    animation-delay: calc(.1s * var(--i));
+    text-shadow: 0 0 10px rgba(246, 213, 92, 0.7);
 }
 
-@keyframes wave-animation {
-    0%, 100% {
+@keyframes jumping-letter {
+    0%, 40%, 100% {
         transform: translateY(0);
     }
-    25% {
-        transform: translateY(-8px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(8px);
+    20% {
+        transform: translateY(-15px);
     }
 }
