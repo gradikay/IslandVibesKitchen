@@ -29,6 +29,24 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+    
+    .page-header h2 {
+        font-size: 3rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .map-container {
+        grid-template-columns: 3fr 2fr;
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -53,16 +71,17 @@
         font-size: 1.2rem;
     }
     
-    .about-content, .contact-container {
+    .about-content, .contact-container, .story-content, .ingredients-content, .catering-content {
         flex-direction: column;
         gap: 40px;
     }
     
-    .about-image, .about-text {
+    .about-image, .about-text, .story-image, .story-text, .ingredients-image, 
+    .ingredients-text, .catering-image, .catering-text {
         width: 100%;
     }
     
-    .about-image {
+    .about-image, .story-image, .ingredients-image, .catering-image {
         order: -1;
         max-width: 500px;
         margin: 0 auto 30px;
@@ -74,6 +93,54 @@
     
     .specialties-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .ingredients-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .timeline:before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        justify-content: flex-start;
+        padding-right: 0;
+        padding-left: 70px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        padding-left: 70px;
+    }
+    
+    .timeline-dot {
+        left: 30px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+        left: auto;
     }
     
     .footer-content {
@@ -88,6 +155,10 @@
         grid-template-columns: 1fr;
         max-width: 600px;
         margin: 0 auto;
+    }
+    
+    .page-header h2 {
+        font-size: 2.5rem;
     }
 }
 
@@ -182,7 +253,7 @@
         max-width: 250px;
     }
     
-    .specialties-grid {
+    .specialties-grid, .team-grid, .values-grid {
         grid-template-columns: 1fr;
         max-width: 450px;
         margin: 0 auto;
@@ -200,8 +271,63 @@
         flex-shrink: 0;
     }
     
+    .page-header h2 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
     .testimonial-text {
         font-size: 1.1rem;
+    }
+    
+    .story-content, .ingredients-content, .catering-content {
+        gap: 30px;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline:before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        padding-left: 50px;
+    }
+    
+    .timeline-dot {
+        left: 20px;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .ingredients-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-form-container {
+        margin-top: 30px;
+    }
+    
+    .map-info-item {
+        margin-bottom: 20px;
+    }
+    
+    .catering-services li {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .catering-services .service-icon {
+        margin: 0 auto 15px;
     }
     
     .footer-content {
@@ -244,6 +370,10 @@
     
     .hero p {
         font-size: 1rem;
+    }
+    
+    .page-header h2 {
+        font-size: 1.8rem;
     }
     
     .btn {
@@ -298,6 +428,68 @@
     
     .contact-icon {
         margin-bottom: 10px;
+    }
+    
+    .story-text h3, .story-section h3, .ingredients-text h3, .catering-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .quote {
+        padding: 20px 20px 20px 40px;
+    }
+    
+    .quote:before {
+        font-size: 2.5rem;
+        left: 10px;
+    }
+    
+    .timeline {
+        margin: 30px auto;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    .value-card {
+        padding: 20px 15px;
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .value-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .ingredients-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+        gap: 20px;
+    }
+    
+    .map-embed {
+        height: 300px;
+    }
+    
+    .reservation-policy {
+        padding: 15px;
+    }
+    
+    .catering-services li {
+        padding: 15px 10px;
+    }
+    
+    .catering-services .service-text h4 {
+        font-size: 1.1rem;
     }
 }
 
