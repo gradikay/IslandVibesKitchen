@@ -41,9 +41,9 @@
   z-index: 1;
 }
 
-/* Special section with Jamaican background */
+/* Special section with Jamaican restaurant background */
 .jamaica-bg-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/jamaica-sunset.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../attached_assets/IMG_2557C077D35D-1.jpeg') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 60px 0;
