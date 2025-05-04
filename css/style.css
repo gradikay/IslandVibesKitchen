@@ -5,11 +5,11 @@
 
 /* ===== GLOBAL STYLES ===== */
 :root {
-    /* Color Palette - Jamaican Flag Inspired */
-    --primary-color: #009B77; /* Jamaican Green */
-    --secondary-color: #FED141; /* Jamaican Yellow */
-    --accent-color: #FFE9A3; /* Light Yellow */
-    --dark-color: #000000; /* Black */
+    /* Color Palette */
+    --primary-color: #8b4513; /* Saddle Brown */
+    --secondary-color: #deb887; /* Burlywood */
+    --accent-color: #f5deb3; /* Wheat */
+    --dark-color: #2a2a2a;
     --light-color: #f9f9f9;
     --text-color: #333333;
     --white-color: #ffffff;
@@ -123,7 +123,7 @@ ul, ol {
 }
 
 .btn-primary:hover {
-    background-color: #007a5e;
+    background-color: #7a3b10;
     color: var(--white-color);
 }
 
@@ -240,7 +240,7 @@ nav {
 .hero {
     position: relative;
     height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../attached_assets/IMG_2557C077D35D-1.jpeg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-bg.jpg') no-repeat center center;
     background-size: cover;
     color: var(--white-color);
     display: flex;
@@ -329,15 +329,15 @@ nav {
 }
 
 .dish-image-1 {
-    background-image: url('../img/jerk-chicken.jpg');
+    background-image: url('../img/pasta.jpg');
 }
 
 .dish-image-2 {
-    background-image: url('../img/caribbean-food.jpg');
+    background-image: url('../img/salmon.jpg');
 }
 
 .dish-image-3 {
-    background-image: url('../img/caribbean-drinks.jpg');
+    background-image: url('../img/tiramisu.jpg');
 }
 
 .dish-info {
@@ -378,7 +378,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('../img/tropical-fruits.jpg') no-repeat center center;
+    background: url('../img/restaurant.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -435,7 +435,7 @@ nav {
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../attached_assets/IMG_2557C077D35D-1.jpeg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-bg.jpg') no-repeat center center;
     background-size: cover;
     color: var(--white-color);
     text-align: center;
@@ -570,7 +570,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('../attached_assets/IMG_2557C077D35D-1.jpeg') no-repeat center center;
+    background: url('../img/restaurant.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -580,7 +580,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('../img/jamaican-spices.jpg') no-repeat center center;
+    background: url('../img/ingredients.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -611,15 +611,15 @@ nav {
 }
 
 .chef-image-1 {
-    background-image: url('../img/jamaican-chef1.jpg');
+    background-image: url('../img/chef1.jpg');
 }
 
 .chef-image-2 {
-    background-image: url('../img/jamaican-chef2.jpg');
+    background-image: url('../img/chef2.jpg');
 }
 
 .chef-image-3 {
-    background-image: url('../img/jamaican-chef3.jpg');
+    background-image: url('../img/chef3.jpg');
 }
 
 .team-member-info {
