@@ -345,6 +345,30 @@ nav {
     height: 100vh;
     min-height: 600px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg') no-repeat center center;
+    
+/* Wave text animation for 'Jamaican' */
+.wave-text {
+    display: inline-block;
+    position: relative;
+    color: var(--jamaica-yellow);
+    font-weight: 700;
+    animation: wave-animation 2.5s ease-in-out infinite;
+    text-shadow: 0 0 5px rgba(246, 213, 92, 0.5);
+}
+
+@keyframes wave-animation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(8px);
+    }}
     background-size: cover;
     color: var(--white);
     display: flex;
@@ -2066,5 +2090,29 @@ footer:before {
     
     .contact-info, .contact-form-container {
         padding: 30px 20px;
+    }
+}
+/* Wave text animation for 'Jamaican' */
+.wave-text {
+    display: inline-block;
+    position: relative;
+    color: var(--jamaica-yellow);
+    font-weight: 700;
+    animation: wave-animation 2.5s ease-in-out infinite;
+    text-shadow: 0 0 8px rgba(246, 213, 92, 0.6);
+}
+
+@keyframes wave-animation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(8px);
     }
 }
