@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Setup mobile menu functionality
      */
     function setupMobileMenu() {
-        const menuToggle = document.querySelector('.menu-toggle');
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
         if (menuToggle) {
             menuToggle.addEventListener('click', function() {
                 menuToggle.classList.toggle('active');
