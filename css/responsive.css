@@ -564,6 +564,76 @@
     }
 }
 
+/* === MEAL DETAIL PAGE RESPONSIVE STYLES === */
+@media screen and (max-width: 1024px) {
+    .meal-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .meal-gallery {
+        max-width: 100%;
+    }
+    
+    .chefs-note-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .chef-message blockquote {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .meal-thumbnails {
+        justify-content: center;
+    }
+    
+    .meal-details {
+        padding: 20px 15px;
+    }
+    
+    .meal-actions {
+        flex-direction: column;
+    }
+    
+    .meal-badge, .meal-price {
+        font-size: 0.9rem;
+    }
+    
+    .meal-price {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .meal-thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .meal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .chefs-note-content {
+        padding: 0 10px;
+    }
+    
+    .chef-message blockquote {
+        padding: 15px;
+    }
+    
+    .chef-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
 /* === EVENTS & CATERING PAGE RESPONSIVE STYLES === */
 @media (max-width: 1199.98px) {
     .event-types-grid {

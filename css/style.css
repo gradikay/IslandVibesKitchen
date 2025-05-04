@@ -2116,6 +2116,222 @@ footer:before {
     }
 }
 
+/* ===== MEAL DETAIL PAGE STYLES ===== */
+.meal-content {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.meal-gallery {
+    flex: 1;
+    max-width: 45%;
+}
+
+.meal-main-image {
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.meal-main-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.meal-main-image:hover img {
+    transform: scale(1.03);
+}
+
+.meal-thumbnails {
+    display: flex;
+    gap: 10px;
+}
+
+.meal-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0.7;
+    border: 2px solid transparent;
+}
+
+.meal-thumbnail.active {
+    opacity: 1;
+    border-color: var(--jamaica-green);
+}
+
+.meal-thumbnail:hover {
+    opacity: 0.9;
+}
+
+.meal-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meal-info {
+    flex: 1;
+}
+
+.meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.meal-badge {
+    background-color: var(--jamaica-green);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.meal-price {
+    font-size: 1.8rem;
+    color: var(--jamaica-green);
+    font-weight: 700;
+}
+
+.meal-description p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--dark-brown);
+}
+
+.meal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.meal-tag {
+    background-color: var(--light-beige);
+    color: var(--jamaica-black);
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.meal-details {
+    background-color: var(--lightest-beige);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.meal-detail-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.meal-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.meal-detail-item svg {
+    color: var(--jamaica-green);
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.meal-detail-content h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--jamaica-black);
+}
+
+.meal-detail-content p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.spice-level {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.spice {
+    width: 15px;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.spice.active {
+    background-color: #FF5A5A;
+}
+
+.meal-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.chefs-note-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.chef-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid var(--jamaica-green);
+}
+
+.chef-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chef-message blockquote {
+    background-color: var(--white);
+    border-left: 4px solid var(--jamaica-yellow);
+    padding: 20px 30px;
+    position: relative;
+    margin: 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    box-shadow: var(--box-shadow);
+}
+
+.chef-message blockquote p {
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--dark-brown);
+    margin-bottom: 10px;
+}
+
+.chef-message blockquote cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--jamaica-black);
+    display: block;
+    text-align: right;
+}
+
+.recommended-dishes .specialties-grid {
+    margin-top: 30px;
+}
+
 /* ===== EVENTS & CATERING PAGE STYLES ===== */
 .events-intro-content {
     display: flex;
