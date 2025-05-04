@@ -5,11 +5,11 @@
 
 /* ===== GLOBAL STYLES ===== */
 :root {
-    /* Color Palette */
-    --primary-color: #8b4513; /* Saddle Brown */
-    --secondary-color: #deb887; /* Burlywood */
-    --accent-color: #f5deb3; /* Wheat */
-    --dark-color: #2a2a2a;
+    /* Color Palette - Jamaican Flag Inspired */
+    --primary-color: #009B77; /* Jamaican Green */
+    --secondary-color: #FED141; /* Jamaican Yellow */
+    --accent-color: #FFE9A3; /* Light Yellow */
+    --dark-color: #000000; /* Black */
     --light-color: #f9f9f9;
     --text-color: #333333;
     --white-color: #ffffff;
@@ -123,7 +123,7 @@ ul, ol {
 }
 
 .btn-primary:hover {
-    background-color: #7a3b10;
+    background-color: #007a5e;
     color: var(--white-color);
 }
 
