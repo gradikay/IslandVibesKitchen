@@ -2115,3 +2115,319 @@ footer:before {
         transform: translateY(-15px);
     }
 }
+
+/* ===== EVENTS & CATERING PAGE STYLES ===== */
+.events-intro-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.events-intro-text {
+    flex: 1;
+}
+
+.events-intro-image {
+    flex: 1;
+    position: relative;
+}
+
+.rounded-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.image-decoration {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 80%;
+    height: 80%;
+    border: 3px solid var(--jamaica-green);
+    border-radius: var(--border-radius);
+    z-index: -1;
+}
+
+.highlight-box {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--light-beige);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.highlight-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-icon {
+    background-color: var(--jamaica-green);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.highlight-text h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--jamaica-black);
+}
+
+.highlight-text p {
+    margin-bottom: 0;
+    color: var(--dark-brown);
+}
+
+.event-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.event-type-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.event-type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.event-type-icon {
+    color: var(--jamaica-green);
+    margin-bottom: 20px;
+}
+
+.event-type-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--jamaica-black);
+}
+
+.event-type-card p {
+    color: var(--dark-brown);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.bg-light {
+    background-color: var(--light-beige);
+}
+
+.catering-menu-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.menu-option {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.menu-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu-option h3 {
+    background-color: var(--jamaica-green);
+    color: var(--white);
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.menu-option-content {
+    padding: 20px;
+}
+
+.menu-option-items ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.menu-option-items li {
+    margin-bottom: 8px;
+    color: var(--dark-brown);
+}
+
+.catering-note {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--dark-brown);
+    font-style: italic;
+}
+
+.venue-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.venue-image {
+    flex: 1;
+}
+
+.venue-details {
+    flex: 1;
+}
+
+.venue-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.venue-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.venue-features .feature-icon {
+    background-color: var(--jamaica-green);
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.venue-pricing {
+    background-color: var(--light-beige);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: var(--jamaica-black);
+}
+
+.faq-list {
+    margin-top: 40px;
+}
+
+.faq-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--jamaica-black);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--jamaica-green);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 25px 20px;
+    max-height: 1000px;
+}
+
+.catering-contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.contact-option {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.contact-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    color: var(--jamaica-green);
+    margin-bottom: 20px;
+}
+
+.contact-option h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--jamaica-black);
+}
+
+.contact-detail {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--jamaica-green);
+}
