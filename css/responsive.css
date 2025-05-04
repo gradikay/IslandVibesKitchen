@@ -1,0 +1,221 @@
+/* 
+* La Tavola Restaurant Website
+* Responsive Stylesheet
+*/
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .section {
+        padding: 70px 0;
+    }
+
+    .team-grid, .dishes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .welcome-content, .hours-content, .story-content, .philosophy-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .welcome-text, .hours-text, .story-text, .philosophy-text,
+    .welcome-image, .hours-image, .story-image, .philosophy-image {
+        width: 100%;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-details {
+        order: 2;
+    }
+
+    .contact-form-container {
+        order: 1;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    header .container {
+        height: 70px;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        z-index: 1100;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: var(--white-color);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px 30px 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        margin: 0 0 20px;
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .dishes-grid, .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .dish-image, .team-member-image {
+        height: 200px;
+    }
+
+    .dietary-icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .page-header {
+        padding: 100px 0 40px;
+    }
+
+    .page-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .menu-categories {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-category {
+        width: 100%;
+    }
+}
+
+/* Mobile menu toggle animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Fade-in animation for devices that prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        transition: none;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: none;
+    }
+}
