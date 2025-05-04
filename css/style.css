@@ -240,7 +240,7 @@ nav {
 .hero {
     position: relative;
     height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900/?restaurant,italian') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-bg.jpg') no-repeat center center;
     background-size: cover;
     color: var(--white-color);
     display: flex;
@@ -270,7 +270,7 @@ nav {
 .welcome-content {
     display: flex;
     align-items: center;
-    gap:://source.unsplash.com/random/1600x900/?restaurant,italian50px;
+    gap: 50px;
 }
 
 .welcome-text {
@@ -286,7 +286,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('https://source.unsplash.com/random/600x450/?restaurant,chef') no-repeat center center;
+    background: url('../img/chef1.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -329,15 +329,15 @@ nav {
 }
 
 .dish-image-1 {
-    background-image: url('https://source.unsplash.com/random/600x400/?pasta');
+    background-image: url('../img/pasta.jpg');
 }
 
 .dish-image-2 {
-    background-image: url('https://source.unsplash.com/random/600x400/?salmon');
+    background-image: url('../img/salmon.jpg');
 }
 
 .dish-image-3 {
-    background-image: url('https://source.unsplash.com/random/600x400/?tiramisu');
+    background-image: url('../img/tiramisu.jpg');
 }
 
 .dish-info {
@@ -378,7 +378,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('https://source.unsplash.com/random/600x450/?restaurant,interior') no-repeat center center;
+    background: url('../img/restaurant.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -435,7 +435,7 @@ nav {
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x800/?restaurant,food') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-bg.jpg') no-repeat center center;
     background-size: cover;
     color: var(--white-color);
     text-align: center;
@@ -570,7 +570,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('https://source.unsplash.com/random/600x450/?restaurant,family') no-repeat center center;
+    background: url('../img/restaurant.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -580,7 +580,7 @@ nav {
     position: relative;
     width: 100%;
     padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('https://source.unsplash.com/random/600x450/?ingredients,food') no-repeat center center;
+    background: url('../img/ingredients.jpg') no-repeat center center;
     background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -611,15 +611,15 @@ nav {
 }
 
 .chef-image-1 {
-    background-image: url('https://source.unsplash.com/random/600x800/?chef,male');
+    background-image: url('../img/chef1.jpg');
 }
 
 .chef-image-2 {
-    background-image: url('https://source.unsplash.com/random/600x800/?chef,female');
+    background-image: url('../img/chef2.jpg');
 }
 
 .chef-image-3 {
-    background-image: url('https://source.unsplash.com/random/600x800/?chef');
+    background-image: url('../img/chef3.jpg');
 }
 
 .team-member-info {
