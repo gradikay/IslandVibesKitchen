@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupScrollEvents();
         checkElementsInView();
         setupSpecialtyHover();
+        setupFaqAccordion();
 
         // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
@@ -179,6 +180,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 card.addEventListener('mouseleave', function() {
                     this.querySelector('.specialty-badge').style.transform = 'translateY(0)';
+                });
+            });
+        }
+    }
+    
+    /**
+     * Setup FAQ accordion functionality
+     */
+    function setupFaqAccordion() {
+        if (faqItems.length) {
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Toggle the active class on the clicked item
+                    item.classList.toggle('active');
+                    
+                    // Update the toggle symbol
+                    const toggle = question.querySelector('.faq-toggle');
+                    if (toggle) {
+                        toggle.textContent = item.classList.contains('active') ? '−' : '+';
+                    }
                 });
             });
         }
