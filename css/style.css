@@ -261,7 +261,6 @@ header .container {
     letter-spacing: 0.6px;
     line-height: 1.2;
     text-transform: uppercase;
-    white-space: nowrap;
 }
 
 .logo span {

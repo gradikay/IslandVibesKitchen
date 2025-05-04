@@ -52,25 +52,19 @@
 /* Medium screen optimization (around 990px width) */
 @media (min-width: 975px) and (max-width: 1050px) {
     .logo h1 {
-        font-size: 1.6rem;
-        white-space: nowrap;
-        letter-spacing: 0;
+        font-size: 1.8rem;
     }
     
     .logo span {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     .nav-menu li {
-        margin-left: 15px;
+        margin-left: 20px;
     }
     
     .nav-menu li a {
         font-size: 0.85rem;
-    }
-    
-    header .container {
-        height: 80px;
     }
 }
 
