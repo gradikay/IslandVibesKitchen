@@ -1675,9 +1675,14 @@ footer:before {
     margin-bottom: 20px;
 }
 
-.footer-logo img {
-    height: 60px;
+.footer-logo h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--jamaica-green);
     margin-bottom: 15px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
 }
 
 .footer-about {
