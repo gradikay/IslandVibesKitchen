@@ -1,0 +1,290 @@
+/**
+ * Island Vibes Kitchen - Caribbean Music Player Styles
+ */
+
+.music-section {
+    background-color: var(--light-beige);
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.music-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/music-pattern.svg');
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.music-container {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.music-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url('../images/music-notes.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.music-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.music-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--jamaica-green);
+}
+
+.music-title h3 {
+    color: var(--jamaica-black);
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.music-title p {
+    color: var(--dark-brown);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Music Player Styling */
+.caribbean-music-player {
+    position: relative;
+    background: linear-gradient(90deg, rgba(0,155,58,0.1) 0%, rgba(254,209,0,0.1) 100%);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.control-button {
+    background-color: var(--jamaica-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: var(--transition);
+}
+
+.control-button:hover {
+    background-color: var(--jamaica-green-dark);
+    transform: scale(1.05);
+}
+
+.control-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.track-info-container {
+    flex: 1;
+}
+
+.track-title {
+    font-weight: 600;
+    color: var(--jamaica-black);
+    margin: 0;
+    font-size: 1rem;
+}
+
+.track-artist {
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.volume-control {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.progress-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 6px;
+    border-radius: 3px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: var(--jamaica-green);
+    height: 6px;
+    border-radius: 3px;
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+/* Playlist Styling */
+.playlist-container {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--jamaica-green) var(--light-beige);
+}
+
+.playlist-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playlist-container::-webkit-scrollbar-track {
+    background: var(--light-beige);
+}
+
+.playlist-container::-webkit-scrollbar-thumb {
+    background-color: var(--jamaica-green);
+    border-radius: 20px;
+}
+
+.playlist-item {
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.playlist-item:hover {
+    background-color: rgba(0, 155, 58, 0.1);
+}
+
+.playlist-item.current {
+    background-color: rgba(0, 155, 58, 0.15);
+    border-left: 3px solid var(--jamaica-green);
+}
+
+.playlist-item .track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-item .track-title {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+
+.playlist-item .track-artist {
+    font-size: 0.85rem;
+}
+
+/* YouTube Embed Fallback Styling */
+.youtube-embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.youtube-embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+.embed-message {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--dark-brown);
+    font-style: italic;
+}
+
+.music-note {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .player-controls {
+        flex-wrap: wrap;
+    }
+    
+    .volume-control {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .music-container {
+        padding: 15px;
+    }
+    
+    .caribbean-music-player {
+        padding: 15px;
+    }
+    
+    .control-button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .control-button svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .track-title {
+        font-size: 0.9rem;
+    }
+    
+    .track-artist {
+        font-size: 0.8rem;
+    }
+}
