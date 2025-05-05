@@ -327,8 +327,6 @@ nav {
     height: 30px;
     position: relative;
     z-index: 1100;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .mobile-menu-toggle span {
@@ -338,6 +336,7 @@ nav {
     background-color: var(--jamaica-green);
     border-radius: 3px;
     transition: var(--transition);
+    margin: 6px 0;
 }
 
 /* ===== HERO SECTION ===== */
