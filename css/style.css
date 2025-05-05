@@ -319,7 +319,7 @@ nav {
 }
 
 .mobile-menu-toggle {
-    display: none;
+    /* Default display is none, but will be overridden in responsive.css */
     background: none;
     border: none;
     cursor: pointer;
@@ -330,7 +330,7 @@ nav {
 }
 
 .mobile-menu-toggle span {
-    display: block;
+    /* Default styles for the hamburger bars */
     width: 30px;
     height: 3px;
     margin: 6px 0;
