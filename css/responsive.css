@@ -623,6 +623,19 @@
         max-width: 500px;
         margin: 30px auto 0;
     }
+    
+    /* Jamaican Postcard Responsive Styles */
+    .postcard-header {
+        padding: 15px 20px;
+    }
+    
+    .postcard-title h3 {
+        font-size: 2rem;
+    }
+    
+    .option-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -634,6 +647,38 @@
     
     .meal-nutrition .nutrition-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Jamaican Postcard Responsive Styles */
+    .postcard-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .postcard-title {
+        text-align: center;
+    }
+    
+    .postcard-stamp {
+        margin: 0 auto;
+    }
+    
+    .option-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .customize-section {
+        padding: 15px;
+    }
+    
+    .meal-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .meal-actions .btn {
+        width: 100%;
     }
 }
 
@@ -659,6 +704,49 @@
     .review-header {
         flex-direction: column;
         gap: 5px;
+    }
+    
+    /* Jamaican Postcard Responsive Styles */
+    .postcard-title h3 {
+        font-size: 1.8rem;
+    }
+    
+    .postcard-price {
+        font-size: 1.5rem;
+    }
+    
+    .postcard-stamp {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .postcard-stamp span {
+        font-size: 0.8rem;
+    }
+    
+    .postcard-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .postcard-description p {
+        font-size: 1rem;
+    }
+    
+    .customize-meal h4 {
+        font-size: 1.3rem;
+    }
+    
+    .customize-section h5 {
+        font-size: 1.1rem;
+    }
+    
+    .custom-option {
+        padding: 8px 10px;
+    }
+    
+    .special-instructions textarea {
+        height: 80px;
     }
 }
 
