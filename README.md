@@ -100,6 +100,5 @@ This project is available for educational purposes. Please contact the repositor
 
 ## Credits
 
-- Website design and development: [Your Name]
-- Food photography: [Credit Sources]
-- Special thanks to the Island Vibes Kitchen team for their authentic recipes and cultural insights
+- Website design and development: Gradi Kayamba
+- Food photography: Gradi Kayamba
