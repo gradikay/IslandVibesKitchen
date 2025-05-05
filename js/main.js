@@ -210,16 +210,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**
  * Initialize Testimonial Slider
- * This is a simple auto-scroll testimonial slider
+ * This is a slider with 4 testimonials and dots navigation
  */
 class TestimonialSlider {
     constructor(sliderSelector) {
         this.slider = document.querySelector(sliderSelector);
         if (!this.slider) return;
         
-        this.testimonials = this.slider.querySelectorAll('.testimonial');
+        this.track = this.slider.querySelector('.testimonials-track');
+        if (!this.track) return;
+        
+        this.testimonials = this.track.querySelectorAll('.testimonial');
         if (this.testimonials.length <= 1) return;
         
+        this.dots = this.slider.querySelectorAll('.testimonial-dot');
         this.currentIndex = 0;
         this.interval = null;
         this.animationDuration = 500; // ms
@@ -229,13 +233,17 @@ class TestimonialSlider {
     }
     
     initSlider() {
-        // Clone the first testimonial and append it to the end for infinite loop
-        const firstClone = this.testimonials[0].cloneNode(true);
-        this.slider.appendChild(firstClone);
-        
         // Set initial position
-        this.testimonials = this.slider.querySelectorAll('.testimonial');
         this.setPosition();
+        
+        // Add click events to dots
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.stopSlider();
+                this.goToSlide(index);
+                this.startSlider();
+            });
+        });
         
         // Start the slider
         this.startSlider();
@@ -246,23 +254,23 @@ class TestimonialSlider {
     }
     
     setPosition() {
-        const position = -this.currentIndex * 100;
-        this.slider.style.transform = `translateX(${position}%)`;
+        this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+        
+        // Update active dot
+        this.dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+    }
+    
+    goToSlide(index) {
+        this.currentIndex = index;
+        this.track.style.transition = `transform ${this.animationDuration}ms ease-in-out`;
+        this.setPosition();
     }
     
     nextSlide() {
-        if (this.currentIndex === this.testimonials.length - 1) {
-            // We're at the cloned slide, quickly reset to the first slide without animation
-            this.currentIndex = 0;
-            this.slider.style.transition = 'none';
-            this.setPosition();
-            
-            // Force reflow to make sure the jump happens before re-enabling animation
-            this.slider.offsetHeight;
-            this.slider.style.transition = `transform ${this.animationDuration}ms ease`;
-        }
-        
-        this.currentIndex++;
+        this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+        this.track.style.transition = `transform ${this.animationDuration}ms ease-in-out`;
         this.setPosition();
     }
     
