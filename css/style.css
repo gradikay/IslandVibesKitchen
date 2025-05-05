@@ -345,7 +345,13 @@ nav {
     height: 100vh;
     min-height: 600px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg') no-repeat center center;
-    
+    background-size: cover;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+}
+
 /* Wave text animation for 'Jamaican' */
 .wave-text {
     display: inline-block;
@@ -368,12 +374,7 @@ nav {
     }
     75% {
         transform: translateY(8px);
-    }}
-    background-size: cover;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    padding-top: 90px;
+    }
 }
 
 .hero-content {
@@ -2713,21 +2714,4 @@ footer:before {
     color: var(--jamaica-green);
 }
 
-.wave-text-wrapper {
-  display: inline-block !important;
-}
-
-.wave-text {
-  display: inline-block !important;
-  animation: wave 1.5s infinite ease-in-out !important;
-  animation-delay: calc(var(--i) * 0.1s) !important;
-}
-
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px) ;
-  }
-}
+/* Removed duplicate wave-text styles and keyframes as they're already defined earlier */

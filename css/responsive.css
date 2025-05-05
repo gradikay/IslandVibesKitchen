@@ -254,7 +254,7 @@
         letter-spacing: 0.7px;
     }
     
-    /* Removed duplicate mobile menu toggle animation styles */
+    
     
     .hero {
         height: 80vh;
@@ -535,7 +535,7 @@
     }
 }
 
-/* Removed duplicate mobile menu animation styles */
+
 
 /* Fade-in animation for devices that prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
