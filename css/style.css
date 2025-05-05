@@ -2792,7 +2792,7 @@ footer:before {
 
 .meal-hero-badge {
     position: absolute;
-    top: 20px;
+    top: 70%;
     right: 20px;
     background-color: var(--jamaica-yellow);
     color: var(--jamaica-black);
@@ -2800,7 +2800,7 @@ footer:before {
     padding: 8px 15px;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    transform: rotate(3deg);
+    transform: rotate(11deg);
     z-index: 1;
 }
 
