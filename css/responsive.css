@@ -184,7 +184,7 @@
     }
 
     .mobile-menu-toggle {
-        display: block !important;
+        display: flex !important;
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
