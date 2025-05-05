@@ -2090,6 +2090,313 @@ footer:before {
     }
 }
 
+/* ===== MEAL DETAIL PAGE STYLES ===== */
+.meal-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.meal-showcase {
+    flex: 1;
+    min-width: 300px;
+}
+
+.meal-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+.meal-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.meal-badge {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background-color: var(--jamaica-green);
+    color: var(--white);
+    padding: 8px 40px;
+    font-weight: 600;
+    transform: rotate(45deg);
+    font-size: 0.9rem;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.meal-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.meal-tag {
+    display: inline-block;
+    background-color: rgba(254, 209, 0, 0.15);
+    color: var(--jamaica-green);
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.meal-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.meal-header {
+    margin-bottom: 25px;
+}
+
+.meal-title-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.meal-title-group h3 {
+    font-size: 2rem;
+    color: var(--jamaica-black);
+    margin: 0;
+}
+
+.meal-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--jamaica-green);
+}
+
+.meal-rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: var(--jamaica-yellow);
+    margin-right: 10px;
+}
+
+.rating-count {
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+}
+
+.meal-description, .meal-ingredients, .meal-serving, .meal-chef-note, .meal-nutrition {
+    margin-bottom: 30px;
+}
+
+.meal-description h4, .meal-ingredients h4, .meal-serving h4, .meal-chef-note h4, .meal-nutrition h4 {
+    color: var(--jamaica-black);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--jamaica-yellow);
+    display: inline-block;
+}
+
+.meal-ingredients ul {
+    padding-left: 20px;
+    columns: 2;
+}
+
+.meal-ingredients li {
+    margin-bottom: 8px;
+    color: var(--dark-brown);
+}
+
+.meal-chef-note {
+    background-color: var(--light-beige);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--jamaica-green);
+}
+
+.meal-chef-note h4 {
+    border-bottom: none;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+.meal-chef-note p {
+    font-style: italic;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.nutrition-item {
+    background-color: var(--light-beige);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.nutrition-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--jamaica-black);
+    margin-bottom: 5px;
+}
+
+.nutrition-value {
+    display: block;
+    color: var(--jamaica-green);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.nutrition-note {
+    font-size: 0.8rem;
+    color: var(--dark-brown);
+    text-align: center;
+}
+
+.meal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.related-dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.related-dish-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.related-dish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.related-dish-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.related-dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.related-dish-card:hover .related-dish-image img {
+    transform: scale(1.05);
+}
+
+.related-dish-content {
+    padding: 20px;
+}
+
+.related-dish-content h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--jamaica-black);
+    font-size: 1.2rem;
+}
+
+.related-dish-content p {
+    color: var(--dark-brown);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.related-dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.related-dish-price {
+    font-weight: 700;
+    color: var(--jamaica-green);
+}
+
+.related-dish-link {
+    color: var(--jamaica-green);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.related-dish-link:hover {
+    color: var(--jamaica-yellow);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--jamaica-black);
+}
+
+.review-date {
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+}
+
+.review-rating {
+    color: var(--jamaica-yellow);
+    margin-bottom: 15px;
+}
+
+.review-text p {
+    margin: 0;
+    color: var(--dark-brown);
+    font-style: italic;
+}
+
+.review-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.review-cta p {
+    margin-bottom: 15px;
+    color: var(--dark-brown);
+}
+
 /* ===== EVENTS & CATERING PAGE STYLES ===== */
 .events-intro-content {
     display: flex;

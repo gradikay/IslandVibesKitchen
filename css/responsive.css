@@ -569,6 +569,80 @@
     }
 }
 
+/* === MEAL DETAIL PAGE RESPONSIVE STYLES === */
+@media (max-width: 989.98px) {
+    .meal-content {
+        flex-direction: column;
+    }
+    
+    .meal-showcase {
+        max-width: 100%;
+    }
+    
+    .meal-ingredients ul {
+        columns: 1;
+    }
+    
+    .meal-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .meal-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .related-dishes-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .meal-title-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .meal-nutrition .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .meal-image .meal-badge {
+        font-size: 0.8rem;
+        padding: 6px 30px;
+        right: -30px;
+    }
+    
+    .meal-title-group h3 {
+        font-size: 1.8rem;
+    }
+    
+    .meal-price {
+        font-size: 1.3rem;
+    }
+    
+    .meal-tags {
+        justify-content: center;
+    }
+    
+    .review-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
 /* === EVENTS & CATERING PAGE RESPONSIVE STYLES === */
 @media (max-width: 1199.98px) {
     .event-types-grid {
