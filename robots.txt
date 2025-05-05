@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://islandvibeskitchen.com/sitemap.xml
+
+# Block access to specific files/folders if needed
+# Disallow: /css/
+# Disallow: /js/
+# Disallow: /images/

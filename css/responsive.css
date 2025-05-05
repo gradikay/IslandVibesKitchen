@@ -184,6 +184,7 @@
     }
 
     .mobile-menu-toggle {
+        color:black !important;
         display: block !important;
         width: 30px;
         height: 25px;
@@ -193,10 +194,6 @@
         padding: 0;
         position: relative;
         z-index: 1000;
-    }
-
-    .mobile-menu-toggle span {
-      transform: translateZ(0);
     }
 
     .mobile-menu-toggle span {
