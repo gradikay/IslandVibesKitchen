@@ -196,6 +196,10 @@
     }
 
     .mobile-menu-toggle span {
+      transform: translateZ(0);
+    }
+
+    .mobile-menu-toggle span {
         display: block !important;
         width: 30px;
         height: 3px;
