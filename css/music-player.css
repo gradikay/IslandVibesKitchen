@@ -232,6 +232,12 @@
     font-style: italic;
 }
 
+.music-footer {
+    text-align: center;
+    font-style: italic;
+    color: var(--dark-brown);
+}
+
 .music-note {
     animation: float 3s ease-in-out infinite;
 }
