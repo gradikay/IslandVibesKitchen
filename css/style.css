@@ -489,7 +489,7 @@ nav {
     right: -10px;
     width: 80px;
     height: 40px;
-    background: linear-gradient(135deg, var(--jamaica-green) 40%, var(--jamaica-yellow) 40%, var(--jamaica-yellow) 60%, var(--jamaica-black) 60%);
+    background: linear-gradient(207deg, var(--jamaica-green) 40%, var(--jamaica-yellow) 40%, var(--jamaica-yellow) 60%, var(--jamaica-black) 60%);
     box-shadow: var(--box-shadow);
     border-radius: 4px;
     transform: rotate(-5deg);
@@ -1689,9 +1689,9 @@ footer:before {
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     margin-bottom: 50px;
 }
 
@@ -2025,10 +2025,7 @@ footer:before {
         margin: 0 auto;
     }
     
-    .footer-content {
-        flex-direction: column;
-    }
-    
+    /* Footer responsive styles already handled by grid in main layout */
     .footer-about, .footer-links, .footer-contact, .footer-hours {
         max-width: 100%;
         margin-right: 0;
@@ -2090,29 +2087,6 @@ footer:before {
     
     .contact-info, .contact-form-container {
         padding: 30px 20px;
-    }
-}
-/* Wave text animation for 'Jamaican' */
-.wave-text-wrapper {
-    display: inline-flex;
-}
-
-.wave-text {
-    display: inline-block;
-    position: relative;
-    color: var(--jamaica-yellow);
-    font-weight: 700;
-    animation: jumping-letter 1.5s ease-in-out infinite;
-    animation-delay: calc(.1s * var(--i));
-    text-shadow: 0 0 10px rgba(246, 213, 92, 0.7);
-}
-
-@keyframes jumping-letter {
-    0%, 40%, 100% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(-15px);
     }
 }
 
@@ -2430,4 +2404,23 @@ footer:before {
     margin-top: 10px;
     font-weight: 500;
     color: var(--jamaica-green);
+}
+
+.wave-text-wrapper {
+  display: inline-block !important;
+}
+
+.wave-text {
+  display: inline-block !important;
+  animation: wave 1.5s infinite ease-in-out !important;
+  animation-delay: calc(var(--i) * 0.1s) !important;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px) ;
+  }
 }
