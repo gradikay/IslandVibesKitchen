@@ -43,7 +43,7 @@ temp/
 .sass-cache/
 
 # Replit specific
-.replit 
+.replit
 .breakpoints
 .upm/
 .config/
