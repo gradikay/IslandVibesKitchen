@@ -3,6 +3,17 @@
 * Responsive Stylesheet
 */
 
+/* Large devices (desktops, less than 1043px) */
+@media (max-width: 1201.98px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    .logo span {
+        font-size: 0.8rem;
+        letter-spacing: 0.7px;
+    }
+}
+
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
     .container {
@@ -59,7 +70,6 @@
         letter-spacing: 0.7px;
     }
 }
-
 
 /* Medium devices (tablets, less than 990px) */
 @media (max-width: 994.98px) {

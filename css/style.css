@@ -2766,3 +2766,248 @@ footer:before {
     transform: translateY(-8px) ;
   }
 }
+
+/* ===== JAMAICAN POSTCARD THEME ===== */
+.jamaican-postcard {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--jamaica-green);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.jamaican-postcard:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(to right, var(--jamaica-green) 33%, var(--jamaica-yellow) 33%, var(--jamaica-yellow) 66%, var(--jamaica-black) 66%);
+}
+
+.postcard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--light-beige);
+    border-bottom: 2px dashed var(--jamaica-green);
+}
+
+.postcard-stamp {
+    width: 80px;
+    height: 80px;
+    background-color: var(--jamaica-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transform: rotate(-5deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.postcard-stamp:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 2px dashed var(--jamaica-black);
+    border-radius: 3px;
+}
+
+.postcard-stamp span {
+    font-family: var(--display-font);
+    font-weight: 800;
+    color: var(--jamaica-black);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transform: rotate(5deg);
+    z-index: 1;
+}
+
+.postcard-title {
+    text-align: right;
+}
+
+.postcard-title h3 {
+    font-size: 2.5rem;
+    color: var(--jamaica-green);
+    margin: 0 0 5px;
+    text-shadow: 1px 1px 0 var(--jamaica-yellow);
+}
+
+.postcard-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+}
+
+.postcard-image {
+    position: relative;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.postcard-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postcard-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--jamaica-yellow);
+    color: var(--jamaica-black);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: rotate(5deg);
+}
+
+.postcard-description {
+    padding: 25px 30px;
+    background-color: var(--white);
+    border-bottom: 2px dashed var(--jamaica-green);
+}
+
+.postcard-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--jamaica-black);
+    margin: 0;
+}
+
+/* Customize Meal Styles */
+.customize-meal {
+    padding: 30px;
+    background: linear-gradient(45deg, rgba(0, 155, 58, 0.05), rgba(252, 223, 3, 0.05));
+}
+
+.customize-meal h4 {
+    font-size: 1.5rem;
+    color: var(--jamaica-green);
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.customize-meal h4:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--jamaica-green), var(--jamaica-yellow));
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.customize-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--jamaica-green);
+}
+
+.customize-section h5 {
+    font-size: 1.2rem;
+    color: var(--jamaica-black);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.customize-section h5 .required {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--accent-orange);
+    margin-left: 10px;
+}
+
+.customize-section h5 .optional {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--dark-brown);
+    margin-left: 10px;
+}
+
+.option-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.custom-option {
+    position: relative;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.custom-option:hover {
+    background-color: rgba(0, 155, 58, 0.05);
+}
+
+.custom-option input {
+    margin-right: 10px;
+}
+
+.custom-option label {
+    font-size: 0.95rem;
+    color: var(--jamaica-black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.price-tag {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    color: var(--accent-orange);
+    font-weight: 600;
+}
+
+.special-instructions {
+    margin-top: 30px;
+}
+
+.special-instructions textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    resize: vertical;
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+}
+
+.special-instructions textarea:focus {
+    outline: none;
+    border-color: var(--jamaica-green);
+    box-shadow: 0 0 0 2px rgba(0, 155, 58, 0.2);
+}
+
+.postcard-footer {
+    padding: 25px 30px;
+    background-color: var(--light-beige);
+    border-top: 2px dashed var(--jamaica-green);
+}

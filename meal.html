@@ -50,102 +50,203 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h2>Single Meal</h2>
-                <p>Our signature dish - authentic Jamaican flavors</p>
+                <h2>Burrito Bowl</h2>
+                <p>Jamaican-fusion flavors in a build-your-own bowl</p>
             </div>
         </section>
 
         <!-- Meal Details Section -->
         <section class="meal-details section">
             <div class="container">
-                <div class="meal-content">
-                    <div class="meal-showcase">
-                        <div class="meal-image">
-                            <img src="../images/jerk-chicken.jpg" alt="Jerk Chicken">
-                            <div class="meal-badge">Signature Dish</div>
+                <div class="jamaican-postcard">
+                    <div class="postcard-header">
+                        <div class="postcard-stamp">
+                            <span>Island Vibes</span>
                         </div>
-                        <div class="meal-tags">
-                            <span class="meal-tag">Spicy</span>
-                            <span class="meal-tag">Popular</span>
-                            <span class="meal-tag">Chef's Choice</span>
+                        <div class="postcard-title">
+                            <h3>Burrito Bowl</h3>
+                            <div class="postcard-price">$12.35</div>
+                        </div>
+                    </div>
+                    
+                    <div class="postcard-image">
+                        <img src="images/jerk-chicken.jpg" alt="Burrito Bowl">
+                        <div class="postcard-badge">#1 Most Liked</div>
+                    </div>
+                    
+                    <div class="postcard-description">
+                        <p>Our Jamaican-fusion Burrito Bowl combines island flavors with fresh ingredients for a delicious, customizable meal. Includes: Rice, beans or fajita veggies, plus guac, salsa, queso, sour cream, or cheese.</p>
+                    </div>
+
+                    <div class="customize-meal">
+                        <h4>Customize Your Bowl</h4>
+                        
+                        <div class="customize-section">
+                            <h5>Protein or Veggie <span class="required">(Choose 1)</span></h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="honey-chicken" value="honey-chicken">
+                                    <label for="honey-chicken">Chipotle Honey Chicken <span class="price-tag">(+$0.80)</span></label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="chicken" value="chicken" checked>
+                                    <label for="chicken">Chicken</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="steak" value="steak">
+                                    <label for="steak">Steak <span class="price-tag">(+$2.30)</span></label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="barbacoa" value="barbacoa">
+                                    <label for="barbacoa">Beef Barbacoa <span class="price-tag">(+$2.30)</span></label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="carnitas" value="carnitas">
+                                    <label for="carnitas">Carnitas <span class="price-tag">(+$1.00)</span></label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="sofritas" value="sofritas">
+                                    <label for="sofritas">Sofritas (Plant-Based)</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="protein" id="veggie" value="veggie">
+                                    <label for="veggie">Veggie (includes guac)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Rice <span class="required">(Choose 1)</span></h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="radio" name="rice" id="white-rice" value="white-rice" checked>
+                                    <label for="white-rice">White Rice</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="rice" id="brown-rice" value="brown-rice">
+                                    <label for="brown-rice">Brown Rice</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="rice" id="no-rice" value="no-rice">
+                                    <label for="no-rice">No Rice</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Beans <span class="required">(Choose 1)</span></h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="radio" name="beans" id="black-beans" value="black-beans" checked>
+                                    <label for="black-beans">Black Beans</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="beans" id="pinto-beans" value="pinto-beans">
+                                    <label for="pinto-beans">Pinto Beans</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="radio" name="beans" id="no-beans" value="no-beans">
+                                    <label for="no-beans">No Beans</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Toppings <span class="optional">(Optional)</span></h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="tomato-salsa" value="tomato-salsa">
+                                    <label for="tomato-salsa">Tomato Salsa</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="corn-salsa" value="corn-salsa">
+                                    <label for="corn-salsa">Corn Salsa</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="chili-salsa" value="chili-salsa">
+                                    <label for="chili-salsa">Green or Red Chili Salsa</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="sour-cream" value="sour-cream">
+                                    <label for="sour-cream">Sour Cream</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="fajita-veggies" value="fajita-veggies">
+                                    <label for="fajita-veggies">Fajita Veggies</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="cheese" value="cheese">
+                                    <label for="cheese">Cheese</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="lettuce" value="lettuce">
+                                    <label for="lettuce">Lettuce</label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="toppings" id="queso-blanco" value="queso-blanco">
+                                    <label for="queso-blanco">Queso Blanco <span class="price-tag">(+$2.20)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Extras</h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="checkbox" name="extras" id="tortilla" value="tortilla">
+                                    <label for="tortilla">Tortilla on Side <span class="price-tag">(+$0.65)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Sides <span class="optional">(Optional)</span></h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="checkbox" name="sides" id="chips" value="chips">
+                                    <label for="chips">Chips <span class="price-tag">(+$2.45–$3.50)</span></label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="sides" id="chips-salsa" value="chips-salsa">
+                                    <label for="chips-salsa">Chips & Salsa/Guac/Queso <span class="price-tag">(+$3.00–$6.05)</span></label>
+                                </div>
+                                <div class="custom-option">
+                                    <input type="checkbox" name="sides" id="side-guac" value="side-guac">
+                                    <label for="side-guac">Side of Guac or Queso <span class="price-tag">(+$3.60)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Drinks <span class="optional">(Optional)</span></h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="checkbox" name="drinks" id="soda" value="soda">
+                                    <label for="soda">Soda, Juices, Mineral Water <span class="price-tag">(+$4.10–$4.55)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="customize-section">
+                            <h5>Utensils</h5>
+                            <div class="option-group">
+                                <div class="custom-option">
+                                    <input type="checkbox" name="utensils" id="napkins" value="napkins">
+                                    <label for="napkins">Napkins and Utensils <span class="optional">(Optional)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="special-instructions">
+                            <h5>Special Instructions</h5>
+                            <textarea placeholder="Any special requests? Let us know here..."></textarea>
                         </div>
                     </div>
 
-                    <div class="meal-info">
-                        <div class="meal-header">
-                            <div class="meal-title-group">
-                                <h3>Jerk Chicken</h3>
-                                <div class="meal-price">$15.99</div>
-                            </div>
-                            <div class="meal-rating">
-                                <span class="stars">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </span>
-                                <span class="rating-count">(128 ratings)</span>
-                            </div>
-                        </div>
-
-                        <div class="meal-description">
-                            <h4>Description</h4>
-                            <p>Our signature dish - chicken marinated in a spicy blend of scotch bonnet peppers, allspice, and other herbs, then slow-grilled to perfection. The result is a flavorful, slightly spicy chicken with a distinctive smoky taste that embodies the essence of Jamaican cuisine.</p>
-                            <p>Jerk Chicken has a rich history in Jamaica, dating back to the indigenous Taíno people and later influenced by African cooking techniques. Our recipe stays true to these traditions while adding our own special touch.</p>
-                        </div>
-
-                        <div class="meal-ingredients">
-                            <h4>Key Ingredients</h4>
-                            <ul>
-                                <li>Free-range chicken</li>
-                                <li>Scotch bonnet peppers</li>
-                                <li>Allspice berries</li>
-                                <li>Thyme</li>
-                                <li>Scallions</li>
-                                <li>Ginger</li>
-                                <li>Garlic</li>
-                                <li>Brown sugar</li>
-                                <li>Jamaican rum (for marinade)</li>
-                            </ul>
-                        </div>
-
-                        <div class="meal-serving">
-                            <h4>Served With</h4>
-                            <p>Our Jerk Chicken is served with authentic Jamaican rice and peas (kidney beans), a side of festival (sweet fried dumplings), and fresh coleslaw to balance the heat. Accompanied by our homemade jerk sauce on the side for those who crave extra spice.</p>
-                        </div>
-
-                        <div class="meal-chef-note">
-                            <h4>Chef's Note</h4>
-                            <p>"Our Jerk Chicken is marinated for a full 24 hours to ensure the flavors penetrate deeply. We then slow-cook it over pimento wood imported from Jamaica to achieve that authentic smokiness that can't be replicated any other way. It's a labor of love that honors my grandmother's recipe." — Chef James</p>
-                        </div>
-
-                        <div class="meal-nutrition">
-                            <h4>Nutrition Information</h4>
-                            <div class="nutrition-grid">
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Calories</span>
-                                    <span class="nutrition-value">450</span>
-                                </div>
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Protein</span>
-                                    <span class="nutrition-value">38g</span>
-                                </div>
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Carbs</span>
-                                    <span class="nutrition-value">35g</span>
-                                </div>
-                                <div class="nutrition-item">
-                                    <span class="nutrition-label">Fat</span>
-                                    <span class="nutrition-value">18g</span>
-                                </div>
-                            </div>
-                            <p class="nutrition-note">* Nutritional information is approximate and may vary based on portion size.</p>
-                        </div>
-
+                    <div class="postcard-footer">
                         <div class="meal-actions">
-                            <a href="../contact.html" class="btn btn-primary">Order Now</a>
-                            <a href="../menu.html" class="btn btn-secondary">Back to Menu</a>
+                            <button type="button" class="btn btn-primary">Add to Order</button>
+                            <a href="menu.html" class="btn btn-secondary">Back to Menu</a>
                         </div>
                     </div>
                 </div>
