@@ -1,3 +1,7 @@
+## License
+
+This project is © Gradi Kayamba, 2025. All rights reserved. This code may not be copied, modified, or distributed without explicit permission.
+
 # Island Vibes Kitchen
 
 <div align="center">
