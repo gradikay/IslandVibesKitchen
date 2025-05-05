@@ -649,36 +649,54 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Jamaican Postcard Responsive Styles */
-    .postcard-header {
-        flex-direction: column;
+    /* NEW Meal Page Responsive Styles */
+    .meal-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .meal-hero-image {
+        height: 300px;
+    }
+    
+    .meal-hero-content {
+        padding: 30px 20px;
+    }
+    
+    .meal-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .meal-price {
+        font-size: 1.8rem;
+    }
+    
+    .customize-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
-        text-align: center;
     }
     
-    .postcard-title {
-        text-align: center;
-    }
-    
-    .postcard-stamp {
-        margin: 0 auto;
-    }
-    
-    .option-group {
+    .toppings-grid {
         grid-template-columns: 1fr;
     }
     
-    .customize-section {
-        padding: 15px;
-    }
-    
-    .meal-actions {
+    .order-summary {
         flex-direction: column;
+        padding: 20px;
+    }
+    
+    .order-actions {
         width: 100%;
     }
     
-    .meal-actions .btn {
-        width: 100%;
+    .order-actions .btn {
+        flex: 1;
+    }
+    
+    .recommended-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
     }
 }
 
@@ -706,47 +724,73 @@
         gap: 5px;
     }
     
-    /* Jamaican Postcard Responsive Styles */
-    .postcard-title h3 {
+    /* NEW Meal Page Responsive Styles */
+    .meal-hero-image {
+        height: 200px;
+    }
+    
+    .meal-hero-content {
+        padding: 25px 20px;
+    }
+    
+    .meal-hero-content h1 {
         font-size: 1.8rem;
     }
     
-    .postcard-price {
+    .meal-price {
         font-size: 1.5rem;
+        margin-bottom: 15px;
     }
     
-    .postcard-stamp {
-        width: 70px;
-        height: 70px;
+    .meal-hero-content p {
+        font-size: 0.95rem;
     }
     
-    .postcard-stamp span {
+    .customize-column {
+        padding: 20px 15px;
+    }
+    
+    .customize-group h3 {
+        font-size: 1.2rem;
+    }
+    
+    .customize-group h3 .required,
+    .customize-group h3 .optional {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+    
+    .option-item {
+        padding: 10px;
+    }
+    
+    .option-text {
+        font-size: 0.9rem;
+    }
+    
+    .price-tag {
         font-size: 0.8rem;
     }
     
-    .postcard-badge {
-        font-size: 0.8rem;
-        padding: 6px 12px;
+    .special-notes textarea {
+        height: 80px;
     }
     
-    .postcard-description p {
+    .order-total {
+        font-size: 1.2rem;
+    }
+    
+    .recommended-content {
+        padding: 15px;
+    }
+    
+    .recommended-content h3 {
         font-size: 1rem;
     }
     
-    .customize-meal h4 {
-        font-size: 1.3rem;
-    }
-    
-    .customize-section h5 {
-        font-size: 1.1rem;
-    }
-    
-    .custom-option {
-        padding: 8px 10px;
-    }
-    
-    .special-instructions textarea {
-        height: 80px;
+    .recommended-content p {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
     }
 }
 
