@@ -1100,7 +1100,7 @@ textarea.form-control {
 /* ===== PAGE HEADER ===== */
 .page-header {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg2.png') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg2.png') no-repeat center center;
     background-size: cover;
     color: var(--white);
     padding: 120px 0 60px;
