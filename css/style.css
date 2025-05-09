@@ -344,7 +344,25 @@ nav {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg2.png') no-repeat center center;
+    background: black;
+    opacity: 0.99 !important;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height:100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+}
     
 /* Wave text animation for 'Jamaican' */
 .wave-text {
@@ -354,6 +372,7 @@ nav {
     font-weight: 700;
     animation: wave-animation 2.5s ease-in-out infinite;
     text-shadow: 0 0 5px rgba(246, 213, 92, 0.5);
+    
 }
 
 @keyframes wave-animation {
@@ -368,12 +387,7 @@ nav {
     }
     75% {
         transform: translateY(8px);
-    }}
-    background-size: cover;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    padding-top: 90px;
+    }
 }
 
 .hero-content {
