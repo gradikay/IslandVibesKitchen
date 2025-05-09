@@ -478,12 +478,16 @@ nav {
 .about-image .image-container {
     position: relative;
     width: 100%;
-    padding-bottom: 75%; /* 4:3 aspect ratio */
-    background: url('../images/restaurant.png') no-repeat center center;
-    background-size: cover;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
+}
+
+.about-image .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-image .frame-decoration {
