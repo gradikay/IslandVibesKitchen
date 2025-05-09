@@ -4,6 +4,11 @@
 */
 
 /* ===== GLOBAL STYLES ===== */
+/* Fallback values for browsers that don't support CSS variables */
+html {
+    font-size: 16px;
+}
+
 :root {
     /* Jamaican Flag Colors */
     --jamaica-green: #009B3A;
@@ -580,11 +585,32 @@ nav {
 }
 
 .specialties-grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     position: relative;
     z-index: 2;
+}
+
+/* Fallback for browsers that don't support grid */
+@supports not (display: grid) {
+    .specialties-grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    
+    .specialties-grid > * {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.333% - 30px);
+        flex: 0 0 calc(33.333% - 30px);
+        margin: 15px;
+    }
 }
 
 .specialty-card {
@@ -596,7 +622,10 @@ nav {
 }
 
 .specialty-card:hover {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
     transform: translateY(-10px);
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
