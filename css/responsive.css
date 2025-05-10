@@ -3,7 +3,7 @@
 * Responsive Stylesheet
 */
 
-/* Large devices (desktops, less than 1043px) */
+/* Large devices (desktops, less than 1201px) */
 @media (max-width: 1201.98px) {
     .logo h1 {
         font-size: 1.2rem;
@@ -57,17 +57,6 @@
     
     .map-container {
         grid-template-columns: 3fr 2fr;
-    }
-}
-
-/* Large devices (desktops, less than 1043px) */
-@media (max-width: 1043.98px) {
-    .logo h1 {
-        font-size: 1.2rem;
-    }
-    .logo span {
-        font-size: 0.8rem;
-        letter-spacing: 0.7px;
     }
 }
 
