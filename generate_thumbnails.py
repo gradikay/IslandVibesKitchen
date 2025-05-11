@@ -23,22 +23,38 @@ pages = [
 if not os.path.exists("thumbnails"):
     os.makedirs("thumbnails")
 
-# Desktop screenshots
-driver = webdriver.Chrome(options=chrome_options)
-driver.set_window_size(1920, 1080)
+try:
+    # Desktop screenshots
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.set_window_size(1920, 1080)
 
-for page in pages:
-    driver.get(f"http://0.0.0.0:5000/{page}")
-    sleep(2)  # Wait for content to load
-    driver.save_screenshot(f"thumbnails/{page.split('.')[0]}_desktop.png")
+    for page in pages:
+        try:
+            driver.get(f"http://0.0.0.0:5000/{page}")
+            sleep(3)  # Wait longer for content to load
+            driver.save_screenshot(f"thumbnails/{page.split('.')[0]}_desktop.png")
+            print(f"Created desktop screenshot for {page}")
+        except Exception as e:
+            print(f"Error capturing desktop screenshot for {page}: {e}")
 
-# Mobile screenshots
-driver.set_window_size(375, 812)  # iPhone X dimensions
+    # Mobile screenshots
+    driver.set_window_size(375, 812)  # iPhone X dimensions
 
-for page in pages:
-    driver.get(f"http://0.0.0.0:5000/{page}")
-    sleep(2)  # Wait for content to load
-    driver.save_screenshot(f"thumbnails/{page.split('.')[0]}_mobile.png")
+    for page in pages:
+        try:
+            driver.get(f"http://0.0.0.0:5000/{page}")
+            sleep(3)  # Wait longer for content to load
+            driver.save_screenshot(f"thumbnails/{page.split('.')[0]}_mobile.png")
+            print(f"Created mobile screenshot for {page}")
+        except Exception as e:
+            print(f"Error capturing mobile screenshot for {page}: {e}")
 
-driver.quit()
-print("Screenshots generated in 'thumbnails' directory!")
+except Exception as e:
+    print(f"Error setting up Chrome driver: {e}")
+finally:
+    try:
+        driver.quit()
+    except:
+        pass
+
+print("Screenshot process completed!")
