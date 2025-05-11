@@ -48,3 +48,5 @@ temp/
 .upm/
 .config/
 replit.nix
+uv.lock
+pyproject.toml
