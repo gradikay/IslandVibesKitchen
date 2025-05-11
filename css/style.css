@@ -5,10 +5,6 @@
 
 /* ===== GLOBAL STYLES ===== */
 /* Fallback values for browsers that don't support CSS variables */
-html {
-    font-size: 16px;
-}
-
 :root {
     /* Jamaican Flag Colors */
     --jamaica-green: #009B3A;
