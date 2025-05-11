@@ -3,6 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from time import sleep
 import os
+import chromedriver_autoinstaller
+
+# Install ChromeDriver
+chromedriver_autoinstaller.install()
 
 # Setup Chrome options
 chrome_options = Options()
