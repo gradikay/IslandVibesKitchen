@@ -73,12 +73,16 @@ Interactive elements allowing customers to personalize their dining experience.
 
 ## Setup and Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/island-vibes-kitchen.git
-   ```
-2. Open the project in your favorite code editor
-3. Launch the site by opening `index.html` in your web browser
+1. Clone or download the project files
+2. Open the project in your preferred code editor
+3. To serve the site locally:
+   - Using Python's built-in server:
+     ```bash
+     python -m http.server 5000
+     ```
+   - Or use any local development server of your choice
+
+The site will be available at `http://0.0.0.0:5000`
 
 No build process or dependencies required - this is a pure HTML, CSS, and JavaScript project.
 
