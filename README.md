@@ -1,112 +1,78 @@
-## License
+# Island Vibes Kitchen - Website Customization Guide
 
-This project is © Gradi Kayamba, 2025. All rights reserved. This code may not be copied, modified, or distributed without explicit permission.
+## Quick Start 
+1. Open the project files in your code editor
+2. Start a local server: `python -m http.server 5000` 
+3. Visit `http://0.0.0.0:5000` to view the site
 
-# Island Vibes Kitchen
+## Customizing Content
 
-<div align="center">
-  <img src="images/logo.png" alt="Island Vibes Kitchen Logo" width="200">
-  <h3>Authentic Jamaican Cuisine</h3>
-</div>
+### Text Modifications
+Edit these files to change website content:
+- `index.html` - Homepage content
+- `about.html` - About page content and team information
+- `menu.html` - Menu items and pricing
+- `contact.html` - Contact information and hours
+- `events.html` - Events and catering information
+- `meal.html` - Customizable meal options
 
-## About this Project
+### Image Modifications
+1. Add your images to the `assets/images/` directory
+2. Replace existing images while keeping the same filenames, or
+3. Update image paths in HTML files if using new filenames
 
-Island Vibes Kitchen is a responsive, visually engaging website for a local Jamaican restaurant. The site showcases authentic Caribbean cuisine with a focus on traditional Jamaican dishes and the vibrant culture they represent.
+Common image locations:
+- Logo: `assets/images/logo.png`
+- Hero images: `assets/images/hero.webp`, `assets/images/hero-bg2.png`
+- Team photos: `assets/images/chef-*.png`
+- Food photos: `assets/images/jerk-chicken.png`, etc.
 
-![Island Vibes Kitchen Homepage](images/restaurant.png)
+### Styling Modifications
+Edit these files to change the website's appearance:
+- `css/style.css` - Main styling
+- `css/responsive.css` - Mobile and responsive design
 
-## Features
+Key style variables (in `css/style.css`):
+```css
+:root {
+  --jamaica-green: #009B3A;
+  --jamaica-yellow: #FED100;
+  --jamaica-black: #000000;
+  /* Add/modify colors here */
+}
+```
 
-- **Fully Responsive Design**: Optimized for all devices from mobile phones to large desktop screens
-- **Interactive Elements**: Including customizable meal options, interactive menu categories, and hover effects
-- **SEO Optimized**: Built with best practices for search engine visibility
-- **Cross-Browser Compatible**: Tested and working properly on all modern browsers
-- **Performance Focused**: Fast loading times with optimized images and efficient code
+## Deployment on Replit
 
-## Technology Stack
+1. Click the "Deploy" button in the top-right corner
+2. Select "Static" deployment type
+3. Configure deployment settings:
+   - Build Command: Leave empty (already built)
+   - Public Directory: `./` (root directory)
+4. Click "Deploy"
 
-- HTML5
-- CSS3 (with custom animations)
-- Vanilla JavaScript (no frameworks)
-- Mobile-first responsive design
-- Semantic HTML for accessibility and SEO
+Your site will be live at the provided Replit deployment URL.
 
-## Pages
+## SEO & Meta Tags
 
-The website consists of the following pages:
+Update meta tags in each HTML file's head section:
+- Page titles
+- Descriptions
+- Open Graph tags
+- Twitter card info
 
-- **Home**: Introduction to Island Vibes Kitchen with featured dishes and ambiance
-- **Menu**: Comprehensive menu organized by categories (starters, main dishes, sides, etc.)
-- **About Us**: The story of the restaurant, its founders, and their culinary philosophy
-- **Events & Catering**: Information about private events and catering services
-- **Meal Customization**: Interactive page for customizing the signature Jamaican Burrito Bowl
-- **Contact**: Business hours, location, and a contact form
+Example:
+```html
+<title>Your New Title | Island Vibes Kitchen</title>
+<meta name="description" content="Your description here">
+```
 
-## Design Elements
+## Maintenance
 
-- Color palette inspired by the Jamaican flag and Caribbean aesthetics
-- Typography using Montserrat for headings and Open Sans for body text
-- Custom animations for a dynamic user experience
-- Authentic food photography highlighting Jamaican cuisine
-
-## SEO Implementation
-
-- Comprehensive meta descriptions and titles optimized for each page
-- Structured data using Schema.org for enhanced search results
-- Mobile-friendly design (Google's Mobile-First Indexing)
-- Optimized image alt tags
-- Semantic HTML structure
-- Sitemap.xml and robots.txt integration
-
-## Preview
-
-Here are some highlights from the website:
-
-### Home Page
-A vibrant introduction to the restaurant with a focus on authentic Jamaican flavors.
-
-### Menu Page
-Showcasing the diverse selection of traditional dishes with appealing visuals and descriptions.
-
-### Customizable Meals
-Interactive elements allowing customers to personalize their dining experience.
-
-## Setup and Installation
-
-1. Clone or download the project files
-2. Open the project in your preferred code editor
-3. To serve the site locally:
-   - Using Python's built-in server:
-     ```bash
-     python -m http.server 5000
-     ```
-   - Or use any local development server of your choice
-
-The site will be available at `http://0.0.0.0:5000`
-
-No build process or dependencies required - this is a pure HTML, CSS, and JavaScript project.
-
-## Development Notes
-
-- The site uses a mobile-first approach with media queries for larger screens
-- CSS variables are used for consistent colors and styling
-- JavaScript is modular and follows best practices for performance
-
-## Future Enhancements
-
-Potential future improvements could include:
-
-- Online ordering system integration
-- Customer review and rating functionality
-- Image gallery of restaurant events
-- Additional animations and interactive elements
-- Blog section featuring Jamaican cuisine and culture
+- Keep image sizes optimized for web
+- Regularly update content and prices
+- Test responsiveness on different devices
+- Check all links are working
 
 ## License
-
-This project is available for educational purposes. Please contact the repository owner for commercial usage.
-
-## Credits
-
-- Website design and development: Gradi Kayamba
-- Food photography: Gradi Kayamba
+© Gradi Kayamba, 2025. All rights reserved.
